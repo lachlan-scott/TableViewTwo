@@ -84,18 +84,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		// extracting the item at the index that corresponds to the table row number
 		// eg. row 1 - item 1, row 2 - item 2, etc.
 		//let swatchColor:UIColor = (colorDictionary[description] as! UIColor)
-		let description:String =  tableData[indexPath.row]
+		let colorName:String =  tableData[indexPath.row]
 		
 		cell?.textLabel?.text = "⬤⬤⬤⬤⬤" //◉◉◉◉◉♠︎♣︎♥︎♦︎
-		cell?.textLabel?.textColor = colorDictionary[description] as? UIColor
+		cell?.textLabel?.textColor = colorDictionary[colorName] as? UIColor
+		
 		cell?.textLabel?.shadowColor = UIColor.lightGray
-		
-		cell?.detailTextLabel?.text = "UIColor.\(description)"
-		
+		cell?.detailTextLabel?.text = "UIColor.\(colorName)"
 		
 		// working
 		//cell?.backgroundColor = colorDictionary[labelText] as? UIColor
-		
 		
 		return cell!
 	}
